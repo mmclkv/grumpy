@@ -36,7 +36,7 @@ def TestFactorialError():
     pass
   else:
     raise AssertionError
-  
+
   try:
     math.factorial(0.5)
   except ValueError:
@@ -46,17 +46,17 @@ def TestFactorialError():
 
 
 def TestLdexp():
-  assert math.ldexp(1,1) == 2
-  assert math.ldexp(1,2) == 4
-  assert math.ldexp(1.5,1) == 3
-  assert math.ldexp(1.5,2) == 6
+  assert math.ldexp(1, 1) == 2
+  assert math.ldexp(1, 2) == 4
+  assert math.ldexp(1.5, 1) == 3
+  assert math.ldexp(1.5, 2) == 6
 
 
 def TestLog():
   assert math.log(math.e) == 1
-  assert math.log(2,2) == 1
-  assert math.log(10,10) == 1
-  assert math.log(100,10) == 2
+  assert math.log(2, 2) == 1
+  assert math.log(10, 10) == 1
+  assert math.log(100, 10) == 2
 
 
 def TestRadians():
@@ -68,11 +68,9 @@ def TestDegrees():
   assert math.degrees(math.pi) == 180
   assert math.degrees(2 * math.pi) == 360
 
-def TestFsum():
-  assert math.fsum([.1,.1,.1,.1,.1,.1,.1,.1,.1,.1]) == 1
 
 def TestFsum():
-  assert math.fsum([.1,.1,.1,.1,.1,.1,.1,.1,.1,.1]) == 1
+  assert math.fsum([.1, .1, .1, .1, .1, .1, .1, .1, .1, .1]) == 1
 
 
 if __name__ == '__main__':
