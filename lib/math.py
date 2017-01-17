@@ -102,6 +102,7 @@ def fsum(iterable):
         partials[i:] = [x]
     return sum(partials)
 
+
 def isinf(x):
     return IsInf(float(x),0)
     

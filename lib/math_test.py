@@ -68,8 +68,10 @@ def TestDegrees():
   assert math.degrees(math.pi) == 180
   assert math.degrees(2 * math.pi) == 360
 
+
 def TestFsum():
   assert math.fsum([.1,.1,.1,.1,.1,.1,.1,.1,.1,.1]) == 1
+
 
 if __name__ == '__main__':
   weetest.RunTests()
