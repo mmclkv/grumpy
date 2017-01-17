@@ -86,10 +86,21 @@ def frexp(x):
     return Frexp(float(x))
 
 
-# TODO: Implement fsum()
-# def fsum(x):
-#    pass
-
+def fsum(iterable):
+    partials = []  # sorted, non-overlapping partial sums
+    for x in iterable:
+        i = 0
+        for y in partials:
+            if abs(x) < abs(y):
+                x, y = y, x
+            hi = x + y
+            lo = y - (hi - x)
+            if lo:
+                partials[i] = lo
+                i += 1
+            x = hi
+        partials[i:] = [x]
+    return sum(partials)
 
 def isinf(x):
     return IsInf(float(x),0)
